@@ -1,0 +1,347 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* INTRO SCREEN */
+.intro-body {
+  height: 100vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.intro-container {
+  text-align: center;
+}
+
+/* GLITCH TEXT */
+.glitch {
+  position: relative;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: white;
+  letter-spacing: 6px;
+  animation: shake 0.15s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch::before {
+  color: red;
+  transform: translate(-2px, -2px);
+  z-index: -1;
+}
+
+.glitch::after {
+  color: cyan;
+  transform: translate(2px, 2px);
+  z-index: -2;
+}
+
+@keyframes shake {
+  0% { transform: translate(0); }
+  25% { transform: translate(-2px, 1px); }
+  50% { transform: translate(2px, -1px); }
+  75% { transform: translate(-1px, 2px); }
+  100% { transform: translate(0); }
+}
+
+/* ENTER BUTTON */
+.enter-btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 14px 36px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.enter-btn:hover {
+  background: white;
+  color: black;
+}
+/* HEADER */
+.main-header {
+  padding: 20px;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+/* GALLERY */
+.gallery {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.product img:hover {
+  transform: scale(1.05);
+}
+
+/* POPUP */
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.close-btn {
+  margin-top: 20px;
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+/* =========================
+   SITE NAVIGATION
+========================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: black;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-name {
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.site-nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.site-nav a:hover {
+  opacity: 1;
+}
+.page-content {
+  padding: 80px 20px;
+  text-align: center;
+}
+.preview h3 {
+  margin-bottom: 40px; /* pushes images downward */
+  position: relative;
+  z-index: 5;
+}
+.order-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn.instagram {
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  color: white;
+  border: none;
+}
+
+.btn.instagram:hover {
+  opacity: 0.85;
+}
+
+.popup-image {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+/* POPUP OVERLAY */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* POPUP BOX */
+.popup-box {
+  background: #111;
+  padding: 20px;
+  width: 280px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/* POPUP IMAGE */
+.popup-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+}
+
+/* BUTTONS */
+.btn {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+}
+
+.btn.secondary {
+  border-color: gray;
+  color: gray;
+}
+.popup-image {
+  width: 140px;
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: block;
+}
+.payment-info {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  font-size: 14px;
+  color: #fff;
+}
+
+.payment-title {
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.payment-note {
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+/* GALLERY PAGE */
+.gallery-page {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.gallery-sub {
+  opacity: 0.7;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.gallery-item {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* FULLSCREEN */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+.gallery-item {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+video.gallery-item {
+  background: #000;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop — The Real Brand Luxury</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="brand-name">The Real Brand Luxury</div>
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="shop.html" class="active">Shop</a>
+  </nav>
+</header>
+
+<!-- SHOP SECTION -->
+<section class="page-content">
+  <h2>Collection</h2>
+  <p class="collection-sub">Tap an item to view details</p>
+
+  <div class="gallery-grid">
+
+    <div
+      class="product"
+      data-name="Sigilism Tee"
+      data-price="₦8,000 – ₦12,000"
+      data-image="images/DSCN2571.JPG"
+    >
+      <img src="images/DSCN2571.JPG" alt="Sigilism Tee">
+    </div>
+
+    <div
+      class="product"
+      data-name="Tank Top"
+      data-price="₦6,000 – ₦9,000"
+      data-image="images/DSCN2573.JPG"
+    >
+      <img src="images/DSCN2573.JPG" alt="Tank Top">
+    </div>
+
+    <div
+      class="product"
+      data-name="Graphic Tee"
+      data-price="₦9,000 – ₦11,000"
+      data-image="images/DSCN2581.JPG"
+    >
+      <img src="images/DSCN2581.JPG" alt="Graphic Tee">
+    </div>
+
+    <div
+      class="product"
+      data-name="Street Shorts"
+      data-price="₦10,000 – ₦13,000"
+      data-image="images/DSCN2617.JPG"
+    >
+      <img src="images/DSCN2617.JPG" alt="Street Shorts">
+    </div>
+
+    <div
+      class="product"
+      data-name="Back Print Tee"
+      data-price="₦11,000 – ₦14,000"
+      data-image="images/DSCN2621.JPG"
+    >
+      <img src="images/DSCN2621.JPG" alt="Back Print Tee">
+    </div>
+
+  </div>
+</section>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+  <div class="popup-box">
+    <span class="close-btn" onclick="closePopup()">×</span>
+
+    <img id="popup-image" class="popup-image" src="" alt="Product Image">
+
+    <h3 id="product-name"></h3>
+    <p id="product-price"></p>
+
+    <div class="order-buttons">
+      <a
+        id="whatsapp-order"
+        href="https://wa.me/2349012902504"
+        target="_blank"
+        class="btn"
+      >
+        Order via WhatsApp
+      </a>
+
+      <a
+        href="https://instagram.com/trbl.official"
+        target="_blank"
+        class="btn secondary"
+      >
+        Order via Instagram
+      </a>
+      <div class="payment-info">
+  <p class="payment-title">Payment Method</p>
+
+  <p>
+    Bank: <strong>Ecobank</strong><br>
+    Account Name: <strong>Carulous Adewale Gomes</strong><br>
+    Account Number: <strong>0051094149</strong>
+  </p>
+
+  <p class="payment-note">
+    After payment, send proof via Instagram DM.
+  </p>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
+
